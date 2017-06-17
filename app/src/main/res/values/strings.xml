@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Unidad Dos</string>
+    <string name="list_clients">Lista de Clientes</string>
+    <string name="add_client">Agregar Cliente</string>
+    <string name="tv_name">Nombre</string>
+    <string name="tv_last_name">Apellido</string>
+    <string name="tv_email">Correo electrónico</string>
+    <string name="tv_phone_number">Número de teléfono</string>
+    <string name="btn_accept">Aceptar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="error_blank_space">No se puede dejar en blanco</string>
+</resources>
