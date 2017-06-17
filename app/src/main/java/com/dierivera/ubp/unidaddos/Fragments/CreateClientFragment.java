@@ -58,7 +58,7 @@ public class CreateClientFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 attemptCreateUser();
-                Toast.makeText(getContext(), "Cliente agregado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Cliente agregado!", Toast.LENGTH_SHORT).show();
                 getFragmentManager().popBackStack();
             }
         });
