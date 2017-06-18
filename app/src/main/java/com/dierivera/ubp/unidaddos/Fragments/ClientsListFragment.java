@@ -117,7 +117,6 @@ public class ClientsListFragment extends Fragment  implements AdapterView.OnItem
         Bundle extras = new Bundle();
         Client client = clients.get(position);
         extras.putInt(Constants.KEY_ID, client.getId());
-        Log.i(TAG, "Client ID selected: " + client.getId());
         extras.putString(Constants.KEY_FIRST_NAME, client.getName());
         extras.putString(Constants.KEY_LAST_NAME, client.getLastName());
         extras.putString(Constants.KEY_EMAIL, client.getEmail());
@@ -141,7 +140,6 @@ public class ClientsListFragment extends Fragment  implements AdapterView.OnItem
         // Recorre la lista y los elimina
         for(Client client : vehiclesToRemove) {
             //remove from database the selected client
-            Log.i(TAG, "remove: " + client.getId());
             db.deleteClient(client);
             //Refresca el listview
             clients = db.getAll();

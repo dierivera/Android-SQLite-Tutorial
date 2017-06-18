@@ -105,18 +105,15 @@ public class DatabaseHelper {
         }
 
         public long updateClient (Client client){
-            Log.i(TAG, "starting update of client");
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues values = new ContentValues();
             values.put(Constants.KEY_FIRST_NAME, client.getName());
             values.put(Constants.KEY_LAST_NAME, client.getLastName());
             values.put(Constants.KEY_EMAIL, client.getEmail());
             values.put(Constants.KEY_PHONE_NUMBER, client.getPhoneNumber());
-            Log.i(TAG, "client id " + client.getId() + ", name: " + client.getName());
             String whereClause = Constants.KEY_ID + "=" + client.getId();
             // update row
-            int rowsAffected = db.update(TABLE_CLIENTS, values, whereClause, null);
-            Log.i(TAG, "rowsAffected: " + rowsAffected);
+            int rowsAffected = db.update(TABLE_CLIENTS, values, whereClause, null); //returns the number of rows affected when edited (1 or 0 because id being unique id)
             return rowsAffected;
         }
 

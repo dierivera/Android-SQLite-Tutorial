@@ -52,7 +52,7 @@ public class CreateClientFragment extends Fragment {
             String email = extras.getString(Constants.KEY_EMAIL);
             String phoneNumber = extras.getString(Constants.KEY_PHONE_NUMBER);
             mClient = new Client(id, name, lastName, email, phoneNumber);
-            Log.i(TAG, "client object created id: " + id);
+            //Log.i(TAG, "client object created id: " + id);
         }
         setupUI(view);
         return view;
