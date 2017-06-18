@@ -10,7 +10,8 @@
         android:bottom="10dp"
         android:left="10dp"
         android:right="10dp"
-        android:top="10dp">
+        android:top="10dp"
+        android:state_activated="true">
         <shape android:shape="rectangle" >
             <corners android:radius="3dp" />
 
@@ -27,6 +28,16 @@
 
             <solid android:color="@color/white" />
         </shape>
+    </item>
+
+    <item>
+        <inset android:insetBottom="2dp">
+            <selector xmlns:android="http://schemas.android.com/apk/res/android" >
+                <item
+                    android:state_activated="true"
+                    android:drawable="@android:color/darker_gray" />
+            </selector>
+        </inset>
     </item>
 
 </layer-list>

@@ -5,12 +5,21 @@ package com.dierivera.ubp.unidaddos.Models;
  */
 
 public class Client {
+    private int mId;
     private String mName;
     private String mLastName;
     private String mEmail;
     private String mPhoneNumber;
 
     public Client (String name, String lastName, String email, String phoneNumber){
+        this.setName(name);
+        this.setLastName(lastName);
+        this.setEmail(email);
+        this.setPhoneNumber(phoneNumber);
+    }
+
+    public Client (int id, String name, String lastName, String email, String phoneNumber){
+        this.setId(id);
         this.setName(name);
         this.setLastName(lastName);
         this.setEmail(email);
@@ -50,5 +59,12 @@ public class Client {
         mPhoneNumber = phoneNumber;
     }
 
+    public int getId() {
+        return mId;
+    }
+
+    public void setId(int id) {
+        mId = id;
+    }
 
 }
